@@ -10,25 +10,23 @@ $(document).ready(function(){
 
    $("#output-here").text(result);
 
-
-
     console.log(result)
 
   });
 });
 
 //Backend
-// $("#output-here").hide();
+
 var beepBoop = function count(inputArray) {
 
-  //var resultNumbers = countUp.join(" ");
   var countUp = [];
-  //var countArray = countUp.split(" ");
+
   for (var i = 0; i <= inputArray; i ++) {
     countUp.push(i.toString());
   }
 
   for (var i = 0; i < countUp.length; i ++) {
+
     if (countUp[i].indexOf("1") > -1) {
        var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
     }
@@ -40,7 +38,6 @@ var beepBoop = function count(inputArray) {
     if (countUp[i] % 3 === 0) {
        var resultNumbers = countUp.splice(countUp[i], 1, " I'm sorry, Dave. I'm afraid I can't do that");
     }
-
   }
  return countUp;
  };
