@@ -3,19 +3,25 @@
 $(document).ready(function(){
   $("#user-number").submit(function(){
     event.preventDefault();
+
     var inputNumbers = $("#user-number-input").val();
     var inputArray = inputNumbers.split(" ");
     var result = beepBoop(inputArray);
+
+   $("#output-here").text(result);
+
+
+
     console.log(result)
 
   });
 });
 
 //Backend
-
+// $("#output-here").hide();
 var beepBoop = function count(inputArray) {
 
-//  var resultNumbers = [];
+  //var resultNumbers = countUp.join(" ");
   var countUp = [];
   //var countArray = countUp.split(" ");
   for (var i = 0; i <= inputArray; i ++) {
