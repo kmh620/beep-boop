@@ -1,7 +1,5 @@
-//UserI
-
-$(document).ready(function(){
-  $("#user-number").submit(function(){
+$(document).ready(function() {
+  $("#user-number").submit(function() {
     event.preventDefault();
 
     var inputNumbers = $("#user-number-input").val();
@@ -9,13 +7,8 @@ $(document).ready(function(){
     var result = beepBoop(inputArray);
 
    $("#output-here").text(result);
-
-    console.log(result)
-
   });
 });
-
-//Backend
 
 var beepBoop = function count(inputArray) {
   var countUp = [];
@@ -26,10 +19,10 @@ var beepBoop = function count(inputArray) {
 
   for (var i = 0; i < countUp.length; i ++) {
     if (((countUp[i] > 0) && (countUp[i] % 3 === 0)) && ((countUp[i].indexOf("0") > -1) || (countUp[i].indexOf("1") > -1))) {
-      var resultNumbers = countUp.splice(countUp[i], 1, " I'm sorry, Dave. I'm afraid I can't do that");
+       var resultNumbers = countUp.splice(countUp[i], 1, " I'm sorry, Dave. I'm afraid I can't do that");
 
     } else  if ((countUp[i].indexOf("0") > -1) && (countUp[i].indexOf("1") > -1)) {
-      var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
+       var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
 
     } else if (countUp[i].indexOf("0") > -1) {
        var resultNumbers = countUp.splice(countUp[i], 1, " Beep!");
