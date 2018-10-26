@@ -52,7 +52,8 @@
 **or**
 *  _Go to [Beep-Boop gh-pages link](https://kmh620.github.io/beep-boop/)_
 
-* _Input number, CLick submit button_
+* _Input number, Click submit button_
+* _Read output_
 
 
 
