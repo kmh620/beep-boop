@@ -49,9 +49,6 @@
 * _Log in to GitHub_
 * _Clone GitHub URL in terminal_
 * _Open the html file in your Web Browser_
-**or**
-*  _Go to [Beep-Boop gh-pages link](https://kmh620.github.io/beep-boop/)_
-
 * _Input number, Click submit button_
 * _Read output_
 
