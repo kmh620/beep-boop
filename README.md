@@ -37,7 +37,11 @@
   * Ex Output-
     "Boop!"
 
-* If
+* If number entered does not meet any of the above, input number is displayed
+  * Ex Input-
+    5
+  * Ex Output-
+    5
 
 
 
