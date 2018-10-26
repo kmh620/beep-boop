@@ -15,26 +15,31 @@ $(document).ready(function(){
 
 
 
-var beepBoop = function count(inputArray) {
-  var arr = [];
-  for (var i = 0; i <= inputArray; i++) {
-    arr.push(i.toString());
+var beepBoop = function count(inputNumbers) {
+  var outputNumbers = [];
+  var countUp = [];
+  for (var i = 0; i <= inputNumbers; i++) {
+    countUp.push(i.toString());
   }
-  return arr.toString();
-  // if (inputArray % 3 == 0) {
-  //   return true;
+
+  for (var i = 0; i <= countUp.length; i ++) {
+    if ([i] % 3 == 0) {
+    var countArray = Array.from(countUp);
+   outputNumbers = countArray.splice(i, 1, "I'm sorry, Dave. I'm afraid I can't do that.")
+  }
+  //   } else if (inputArray.indexOf("1") > -1) {
+  //     "Boop!"
   //
-  // } else if (inputArray.indexOf("1") > -1) {
-  //   return true;
+  //   }  else if (inputArray.indexOf("0") > -1) {
+  //    "Beep!"
   //
-  // }  else if (inputArray.indexOf("0") > -1) {
-  //    return true;
-  //
-  // } else {
-  //   return inputArray;
+  //   } else {
+  //   number
+  //   }
   // }
-
-
+}
+  return outputNumbers;
+  console.log(outputNumbers)
 
 };
 
