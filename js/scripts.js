@@ -15,15 +15,25 @@ $(document).ready(function(){
 
 
 
- var beepBoop = function(inputArray) {
-
-  if (inputArray % 3 == 0) {
-    return true;
-
-  } else if (inputArray.indexOf("1") > -1) {
-    return true;
-
+var beepBoop = function count(inputArray) {
+  var arr = [];
+  for (var i = 0; i <= inputArray; i++) {
+    arr.push(i.toString());
   }
+  return arr.toString();
+  // if (inputArray % 3 == 0) {
+  //   return true;
+  //
+  // } else if (inputArray.indexOf("1") > -1) {
+  //   return true;
+  //
+  // }  else if (inputArray.indexOf("0") > -1) {
+  //    return true;
+  //
+  // } else {
+  //   return inputArray;
+  // }
+
 
 
 };
