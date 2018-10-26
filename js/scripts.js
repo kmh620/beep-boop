@@ -18,7 +18,6 @@ $(document).ready(function(){
 //Backend
 
 var beepBoop = function count(inputArray) {
-
   var countUp = [];
 
   for (var i = 0; i <= inputArray; i ++) {
@@ -26,25 +25,21 @@ var beepBoop = function count(inputArray) {
   }
 
   for (var i = 0; i < countUp.length; i ++) {
+    if (((countUp[i] > 0) && (countUp[i] % 3 === 0)) && ((countUp[i].indexOf("0") > -1) || (countUp[i].indexOf("1") > -1))) {
+      var resultNumbers = countUp.splice(countUp[i], 1, " I'm sorry, Dave. I'm afraid I can't do that");
 
-    if (countUp[i].indexOf("1") > -1) {
-       var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
+    } else  if ((countUp[i].indexOf("0") > -1) && (countUp[i].indexOf("1") > -1)) {
+      var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
 
-    } else if ((countUp[i].indexOf("0") > -1) && (countUp[i].indexOf("1") > -1)) {
-       var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
-    }
-    
-    if (countUp[i].indexOf("0") > -1) {
+    } else if (countUp[i].indexOf("0") > -1) {
        var resultNumbers = countUp.splice(countUp[i], 1, " Beep!");
-    }
 
-    if (countUp[i] % 3 === 0) {
-       var resultNumbers = countUp.splice(countUp[i], 1, " I'm sorry, Dave. I'm afraid I can't do that");
-    }
+    }else if (countUp[i].indexOf("1") > -1) {
+       var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
 
-    // if ((countUp[i] % 3 !== 0) && (countUp[i].includes("0","1")) {
-    //   var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
-    // }
-  }
+    } else if ((countUp[i] % 3 === 0) && (countUp[i] > 0)) {
+     var resultNumbers = countUp.splice(countUp[i], 1, " I'm sorry, Dave. I'm afraid I can't do that");
+   }
+ }
  return countUp;
  };
