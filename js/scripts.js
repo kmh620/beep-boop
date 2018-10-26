@@ -23,12 +23,12 @@ var beepBoop = function count(inputArray) {
   }
 
   for (var i = 0; i < countUp.length; i ++) {
-    if (countUp[i].indexOf("0") > -1) {
-       var resultNumbers = countUp.splice(countUp[i], 1, "Beep!");
-    }
-
     if (countUp[i].indexOf("1") > -1) {
        var resultNumbers = countUp.splice(countUp[i], 1, "Boop!");
+    }
+
+    if (countUp[i].indexOf("0") > -1) {
+       var resultNumbers = countUp.splice(countUp[i], 1, "Beep!");
     }
 
     if (countUp[i] % 3 === 0) {
