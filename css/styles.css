@@ -1,1 +1,21 @@
+body {
+  color: #02010A;
+  background-color: #C2B9DB;
+}
 
+.jumbotron {
+  color: #695D90;
+  background-color:	#140152;
+}
+
+.well {
+  background-color:	#9A8BC3;
+}
+
+.btn {
+  background-color:	#695D90;
+}
+
+#user-number-input {
+  background-color:	#D6D0E7;
+}

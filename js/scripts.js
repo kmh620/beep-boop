@@ -27,7 +27,7 @@ var beepBoop = function count(inputArray) {
     } else if (countUp[i].indexOf("0") > -1) {
        var resultNumbers = countUp.splice(countUp[i], 1, " Beep!");
 
-    }else if (countUp[i].indexOf("1") > -1) {
+    } else if (countUp[i].indexOf("1") > -1) {
        var resultNumbers = countUp.splice(countUp[i], 1, " Boop!");
 
     } else if ((countUp[i] % 3 === 0) && (countUp[i] > 0)) {
