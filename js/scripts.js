@@ -3,8 +3,8 @@
 $(document).ready(function(){
   $("#user-number").submit(function(){
     event.preventDefault();
-    var inputNumbers = parseInt($("#user-number-input").val());
-
+    var inputNumbers = $("#user-number-input").val();
+    var inputArray = inputNumbers.split(" ");
     result = beepBoop(inputNumbers);
     console.log(result)
 
@@ -13,11 +13,18 @@ $(document).ready(function(){
 
 //Backend
 
- var beepBoop = function(inputNumbers) {
-  if (inputNumbers % 3 == 0) {
+
+
+ var beepBoop = function(inputArray) {
+
+  if (inputArray % 3 == 0) {
+    return true;
+
+  } else if (inputArray.indexOf("1") > -1) {
     return true;
 
   }
+
 
 };
 
