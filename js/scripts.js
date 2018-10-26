@@ -5,7 +5,7 @@ $(document).ready(function(){
     event.preventDefault();
     var inputNumbers = $("#user-number-input").val();
     var inputArray = inputNumbers.split(" ");
-    result = beepBoop(inputNumbers);
+    var result = beepBoop(inputArray);
     console.log(result)
 
   });
@@ -15,18 +15,20 @@ $(document).ready(function(){
 
 
 
-var beepBoop = function count(inputNumbers) {
-  var outputNumbers = [];
+var beepBoop = function count(inputArray) {
+  var resultNumbers = [];
   var countUp = [];
-  for (var i = 0; i <= inputNumbers; i++) {
+  //var countArray = countUp.split(" ");
+  for (var i = 0; i <= inputArray; i ++) {
     countUp.push(i.toString());
   }
 
-  for (var i = 0; i <= countUp.length; i ++) {
-    if ([i] % 3 == 0) {
-    var countArray = Array.from(countUp);
-   outputNumbers = countArray.splice(i, 1, "I'm sorry, Dave. I'm afraid I can't do that.")
+  for (var i = 0; i < countUp.length; i ++) {
+    if (countUp[i] % 3 == 0) {
+     countUp.splice(countUp[i], 1, "I'm sorry, Dave. I'm afraid I can't do that.");
+     console.log(countUp)
   }
+  // }
   //   } else if (inputArray.indexOf("1") > -1) {
   //     "Boop!"
   //
@@ -37,10 +39,7 @@ var beepBoop = function count(inputNumbers) {
   //   number
   //   }
   // }
-}
-  return outputNumbers;
-  console.log(outputNumbers)
-
+ }
 };
 
 
